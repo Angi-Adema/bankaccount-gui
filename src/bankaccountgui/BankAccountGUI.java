@@ -24,7 +24,7 @@ public class BankAccountGUI {
 		JButton buttonSet = new JButton("Set Balance");
 		
 		// Add button to deposit
-		JButton buttonDep = new JBotton("Deposit");
+		JButton buttonDep = new JButton("Deposit");
 		
 		// Add button to withdraw
 		JButton buttonWit = new JButton("Withdraw");
@@ -38,6 +38,12 @@ public class BankAccountGUI {
 		
 		// Add the panel to the frame
 		frame.add(panel);
+		
+		// Set the size of the GUI window, close operation
+		// and make the GUI visible
+		frame.setSize(300, 200);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
 
 	}
 
