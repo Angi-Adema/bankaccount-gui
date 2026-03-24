@@ -1,5 +1,8 @@
 package bankaccountgui;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -15,7 +18,7 @@ public class BankAccountGUI {
 		JFrame frame = new JFrame("Bank Account");
 		JPanel panel = new JPanel();
 		
-		// Use a label to prompt the user to enter their
+		// Create a label to prompt the user to enter their
 		// current balance
 		JLabel label = new JLabel("Please enter amount:");
 		
@@ -28,6 +31,9 @@ public class BankAccountGUI {
 		
 		// Add button to withdraw
 		JButton buttonWit = new JButton("Withdraw");
+		
+		// Empty result to be set by the event listener
+		JLabel result = new JLabel("Your balance is: $0.00");
 		
 		// Add items to the panel 
 		panel.add(label);
@@ -44,6 +50,16 @@ public class BankAccountGUI {
 		frame.setSize(300, 200);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
+		
+		// Add an ActionListener for the buttons and override 
+		// listener method
+		ActionListener buttonEvent = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String response = textField.getText();
+				result.setText("Your balance is: $" + )
+			}
+		};
 
 	}
 
