@@ -17,9 +17,8 @@ public class BankAccountGUI implements ActionListener {
 	private JButton buttonSet, buttonDep, buttonWit;
 	private double balance = 0.0;
 	
-	// Constructor creating and adding GUI components using GridBagLayout
+	// Constructor creating and adding GUI components
 	public BankAccountGUI() {
-		//GridBagConstraints layout = null;
 		
 		// Create JFrame and JPanel objects for GUI window 
 		// and containers
