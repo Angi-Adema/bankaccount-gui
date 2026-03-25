@@ -11,7 +11,7 @@ import javax.swing.JTextField;
 
 public class BankAccountGUI implements ActionListener {
 
-	// Define variables for balance and swing objects
+	// Define balance variable
 	private JTextField textField;
 	private JLabel result;
 	private JButton buttonSet, buttonDep, buttonWit;
@@ -91,8 +91,9 @@ public class BankAccountGUI implements ActionListener {
 	}
 	
 	public static void main(String[] args) {
-		// Generate a new GUI object
-		BankAccountGUI bankaccountgui = new BankAccountGUI();
+		// Generate a new GUI object without storing it in variable to 
+		// remove warning
+		new BankAccountGUI();
 	}
 
 }
