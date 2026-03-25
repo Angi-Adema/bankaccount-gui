@@ -27,7 +27,7 @@ public class BankAccountGUI implements ActionListener {
 		
 		// Create a label to prompt the user to enter their
 		// current balance
-		JLabel label = new JLabel("Please enter amount:");
+		JLabel label = new JLabel("Please enter account balance:");
 		
 		// Add a text field
 		textField = new JTextField(10);
@@ -81,7 +81,7 @@ public class BankAccountGUI implements ActionListener {
 				balance = balance - amount;
 			} 
 			
-			result.setText(String.format("Current balance is: $%.2f", balance));
+			result.setText(String.format("Updated balance is: $%.2f", balance));
 			textField.setText("");
 			
 		} catch (NumberFormatException ee) {
