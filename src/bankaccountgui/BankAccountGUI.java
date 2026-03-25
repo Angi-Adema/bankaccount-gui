@@ -28,7 +28,7 @@ public class BankAccountGUI implements ActionListener {
 		
 		// Create a label to prompt the user to enter their
 		// current balance
-		JLabel label = new JLabel("Please enter account balance:");
+		JLabel label = new JLabel("Enter an amount and choose an action:");
 		
 		// Add a text field
 		textField = new JTextField(10);
@@ -54,7 +54,7 @@ public class BankAccountGUI implements ActionListener {
 		
 		// Set the size of the GUI window, close operation
 		// and make the GUI visible
-		frame.setSize(350, 175);
+		frame.setSize(420, 175);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
