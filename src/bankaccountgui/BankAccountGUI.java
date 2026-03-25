@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+// From Oracle tutorial, implement ActionListener
 public class BankAccountGUI implements ActionListener {
 
 	// Define balance variable
@@ -53,7 +54,7 @@ public class BankAccountGUI implements ActionListener {
 		
 		// Set the size of the GUI window, close operation
 		// and make the GUI visible
-		frame.setSize(400, 200);
+		frame.setSize(350, 175);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
@@ -81,7 +82,11 @@ public class BankAccountGUI implements ActionListener {
 				balance = balance - amount;
 			} 
 			
-			result.setText(String.format("Updated balance is: $%.2f", balance));
+			// Create a String object to be passed into .setText updating the label
+			// to the new balance formated with 2 decimal places after the decimal
+			result.setText(String.format("Your new balance is: $%.2f", balance));
+			
+			// Set the text field back to empty after input processed
 			textField.setText("");
 			
 		} catch (NumberFormatException ee) {
