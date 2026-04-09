@@ -75,7 +75,7 @@ public class BankAccountGUI implements ActionListener {
 			// Conditional to assign the correct functionality to each button
 			// updating the balance and ensuring account cannot be overdrawn
 			if (e.getSource() == buttonSet) {
-				if (amount < 0) {
+				if (amount <= 0) {
 					result.setText("Account balance must be set greater than zero.");
 				} else {
 					balance = amount;
