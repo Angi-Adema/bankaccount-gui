@@ -73,18 +73,35 @@ public class BankAccountGUI implements ActionListener {
 			double amount = Double.parseDouble(textField.getText());
 			
 			// Conditional to assign the correct functionality to each button
-			// updating the balance
+			// updating the balance and ensuring account cannot be overdrawn
 			if (e.getSource() == buttonSet) {
-				balance = amount;
+				if (amount < 0) {
+					result.setText("Account balance must be set greater than zero.");
+				} else {
+					balance = amount;
+					result.setText(String.format("Current Balance: $%.2f", balance));
+				}
 			} else if (e.getSource() == buttonDep) {
-				balance = balance + amount;
+				if (amount <= 0) {
+					result.setText("Please enter a deposit amount greater than zero.");
+				} else {
+					balance = balance + amount;
+					result.setText(String.format("Deposit complete! Current Balance: $%.2f", balance));
+				}
 			} else if (e.getSource() == buttonWit) {
-				balance = balance - amount;
+				if (amount <= 0) {
+					result.setText("Please enter a withdrawal amount greater than zero.");
+				} else if (amount > balance) {
+					result.setText(String.format("Insufficient funds! Current balance is: $%.2f", balance));
+				} else {
+					balance = balance - amount;
+					result.setText(String.format("Withdrawal complete! Current Balance: $%.2f", balance));
+				}
 			} 
 			
 			// Create a String object to be passed into .setText updating the label
 			// to the new balance formated with 2 decimal places after the decimal
-			result.setText(String.format("Your new balance is: $%.2f", balance));
+			//result.setText(String.format("Your new balance is: $%.2f", balance));
 			
 			// Set the text field back to empty after input processed
 			textField.setText("");
