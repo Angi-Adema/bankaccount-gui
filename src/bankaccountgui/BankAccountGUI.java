@@ -109,7 +109,6 @@ public class BankAccountGUI implements ActionListener {
 		} catch (NumberFormatException ee) {
 			result.setText("Please enter a valid number.");	
 		}
-
 	}
 	
 	public static void main(String[] args) {
